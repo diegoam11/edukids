@@ -1,0 +1,132 @@
+/*inicio codigo reutilizado*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Oswald", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header {
+    position: fixed;
+    height: 80px;
+    width: 100%;
+    z-index: 1;
+    padding: 0 20px;
+}
+
+.nav {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.nav_logo{
+    color: #0D6EFD;
+    font-size: 25px;
+}
+
+.nav_logo:hover {
+    color: #1CC922;
+}
+
+/* fin codigo reutilizado */
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px;
+    height: 100vh;
+}
+
+.button-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+  
+.course-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 125px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    background-color: #EAEAEA;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#math-button:hover {
+    background-color: #8b0000;
+    color: white;
+    font-style: solid;
+}
+
+#biology-button:hover {
+    background-color: #006400;
+    color: white;
+    font-style: solid;
+}
+
+#comunication-button:hover {
+    background-color: #ffa500;
+    color: white;
+    font-style: solid;
+}
+
+.user-info span {
+    margin-left: 5px;
+}
+  
+/* barra lateral */
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -300px; /* Inicialmente oculto fuera del viewport */
+    width: 295px;
+    height: 100vh;
+    background-color: #EAEAEA;
+    transition: left 0.4s ease;
+    z-index: 999;
+}
+  
+.sidebar.open {
+    left: 0; /* Mostrar la barra lateral */
+}
+
+.menu-button {
+    cursor: pointer;
+    position: relative;
+}
+
+.menu-button:hover {
+    color: #1CC922;
+}
+
+.close-button:hover {
+    color: #1CC922;
+}
+
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #333;
+    font-size: 20px;
+}

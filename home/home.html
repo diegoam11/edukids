@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="styles.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    </head>
+    <body>
+        <header class="header">
+            <nav class="nav">
+                <div class="menu-button" onclick="toggleSidebar()">
+                    <i class="fas fa-bars fa-2x"></i>
+                </div>
+                <a href="#" class="nav_logo">Edukids</a>
+                <div class="user-info">
+                    <i class="fas fa-user"></i>
+                    <span class="username">diegoam</span>
+                </div>
+            </nav>
+        </header>
+
+        <div class="sidebar" id="sidebar">
+            <button class="close-button" onclick="toggleSidebar()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <main>
+            <div class="button-grid">
+                <button class="course-button" id="math-button" onclick="goToCourse('curso1')">Matemáticas</button>
+                <button class="course-button" id="biology-button" onclick="goToCourse('curso2')">Biología</button>
+                <button class="course-button" id="comunication-button" onclick="goToCourse('curso3')">Comunicacion</button>
+                <button class="course-button" onclick="goToCourse('curso4')">Curso 4</button>
+                <button class="course-button" onclick="goToCourse('curso5')">Curso 5</button>
+                <button class="course-button" onclick="goToCourse('curso6')">Curso 6</button>
+            </div>
+        </main>
+        <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,133 @@
+/*inicio codigo reutilizado*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Oswald", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header {
+    position: fixed;
+    height: 80px;
+    width: 100%;
+    z-index: 1;
+    padding: 0 20px;
+}
+
+.nav {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.nav_logo{
+    color: #0D6EFD;
+    font-size: 25px;
+}
+
+.nav_logo:hover {
+    color: #1CC922;
+}
+
+/* fin codigo reutilizado */
+
+.user-info span {
+    margin-left: 5px;
+}
+  
+/* barra lateral */
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -300px; /* Inicialmente oculto fuera del viewport */
+    width: 295px;
+    height: 100vh;
+    background-color: #EAEAEA;
+    transition: left 0.4s ease;
+    z-index: 999;
+}
+  
+.sidebar.open {
+    left: 0; /* Mostrar la barra lateral */
+}
+
+.menu-button {
+    cursor: pointer;
+    position: relative;
+}
+
+.menu-button:hover {
+    color: #1CC922;
+}
+
+.close-button:hover {
+    color: #1CC922;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #333;
+    font-size: 20px;
+}
+
+/* estilos propios de cuestionarios*/
+  
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 50px);
+}
+
+.content-left {
+    display: block;
+    background-color: #EAEAEA;
+    padding: 50px;
+    border-radius: 10px;
+}
+
+.content-left ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 25px 0;
+}
+
+.content-left ul li{
+    margin: 15px 0;
+}
+
+.image-content img{
+    width: 450px; 
+    height: auto; 
+}
+
+.back-button button {
+    color: white;
+    border: none;
+    outline: none;
+    background: none;
+    text-decoration: none;
+}
+  
+.back-button {
+    text-align: center;
+    padding: 10px 20px;
+    background-color: #0D6EFD;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
