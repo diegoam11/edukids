@@ -1,4 +1,4 @@
-/*inicio codigo reutilizado*/
+/* Barra lateral: inicio codigo reutilizado*/
 * {
     margin: 0;
     padding: 0;
@@ -37,59 +37,9 @@ a {
     color: #1CC922;
 }
 
-/* fin codigo reutilizado */
+/* Barra de navegación: fin codigo reutilizado */
 
-main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 80px;
-    height: 100vh;
-}
-
-.button-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
-}
-  
-.course-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 250px;
-    height: 125px;
-    border: none;
-    border-radius: 10px;
-    font-size: 18px;
-    background-color: #EAEAEA;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-#math-button:hover {
-    background-color: #8b0000;
-    color: white;
-    font-style: solid;
-}
-
-#biology-button:hover {
-    background-color: #006400;
-    color: white;
-    font-style: solid;
-}
-
-#comunication-button:hover {
-    background-color: #ffa500;
-    color: white;
-    font-style: solid;
-}
-
-.user-info span {
-    margin-left: 5px;
-}
-  
-/* barra lateral */
+/* Barra lateral: inicio código reutilizado */
 
 .sidebar {
     position: fixed;
@@ -119,6 +69,7 @@ main {
     color: #1CC922;
 }
 
+
 .close-button {
     position: absolute;
     top: 10px;
@@ -128,4 +79,51 @@ main {
     cursor: pointer;
     color: #333;
     font-size: 20px;
+}
+
+/* Barra lateral: fin codigo reutilizado */
+
+/* Estilos para el contenedor grande */
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 50px); /* Altura de la pantalla menos la altura de la barra de navegación */
+}
+
+.box {
+    text-align: center;
+    padding: 25px 95px;
+    background-color: #EAEAEA;
+    border-radius: 10px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 25px;
+    margin: 20px 0 ;
+}
+
+.grid button,
+.button-group button {
+    padding: 10px 40px;
+    background-color: #1CC922;
+    color: #fff;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+
+.button-group button {
+    background-color: #0D6EFD;
+}
+
+#prev-button {
+    margin-right: 10px;
+}
+
+#question {
+    margin: 20px;
 }

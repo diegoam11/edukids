@@ -88,7 +88,7 @@ a {
   pointer-events: auto;
 }
 
-/* From */
+/* Form */
 
 .form_container {
   position: fixed;
@@ -175,42 +175,51 @@ a {
 .input_box i.password {
   left: 0;
 }
+
 .input_box input:focus ~ i.email,
 .input_box input:focus ~ i.password {
   color: #0D6EFD;
 }
+
 .input_box i.pw_hide {
   right: 0;
   font-size: 18px;
   cursor: pointer;
 }
+
 .option_field {
   margin-top: 14px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
 .form_container a {
   color: #0D6EFD;
   font-size: 12px;
 }
+
 .form_container a:hover {
   text-decoration: underline;
 }
+
 .checkbox {
   display: flex;
   column-gap: 8px;
   white-space: nowrap;
 }
+
 .checkbox input {
   accent-color: #0D6EFD;
 }
+
 .checkbox label {
   font-size: 12px;
   cursor: pointer;
   user-select: none;
   color: #0b0217;
 }
+
 .form_container .button {
   background: #0D6EFD;
   margin-top: 30px;
@@ -218,6 +227,7 @@ a {
   padding: 10px 0;
   border-radius: 10px;
 }
+
 .login_signup {
   font-size: 12px;
   text-align: center;
