@@ -3,6 +3,10 @@ function toggleSidebar() {
     sidebar.classList.toggle('open');
 }
 
+function goToMainMenu() {
+    window.location.href = '../CU-0004 Habilitar cuestionario general/home.html';
+}
+
 // Obtener elementos HTML
 const questionNumberElement = document.getElementById("question-number");
 const questionElement = document.getElementById("question");
@@ -52,6 +56,9 @@ function updateQuestion() {
     });
     prevButton.style.display = "none"; // Ocultar botón anterior al finalizar el cuestionario
     nextButton.textContent = "Volver al menu principal"; // Cambiar texto del botón siguiente al finalizar el cuestionario
+    if(nextButton.textContent != "Siguiente"){
+      nextButton.addEventListener("click", () => goToMainMenu())
+    }
   } else {
     const options = currentQuestion.options;
     optionButtons.forEach((button, index) => {

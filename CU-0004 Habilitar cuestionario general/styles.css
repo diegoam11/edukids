@@ -85,6 +85,12 @@ main {
     font-style: solid;
 }
 
+#general-button:hover {
+    background-color: #ffa500;
+    color: white;
+    font-style: solid;
+}
+
 .user-info span {
     margin-left: 5px;
 }
