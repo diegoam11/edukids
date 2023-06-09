@@ -28,12 +28,22 @@ const questions = [
   },
   {
     questionNumber: 2,
-    question: "¿Cuál es tu animal favorito?",
+    question: "¿Cuál es un número primo?",
     options: [
-      { text: "Perro", correct: true },
-      { text: "Gato", correct: false },
-      { text: "Elefante", correct: false },
-      { text: "León", correct: false }
+      { text: "2", correct: true },
+      { text: "6", correct: false },
+      { text: "8", correct: false },
+      { text: "21", correct: false }
+    ]
+  },
+  {
+    questionNumber: 3,
+    question: "¿Cuál es un número par?",
+    options: [
+      { text: "1", correct: false },
+      { text: "2", correct: true },
+      { text: "5", correct: false },
+      { text: "15", correct: false }
     ]
   },
 ];
@@ -49,8 +59,9 @@ function updateQuestion() {
   questionElement.textContent = currentQuestion.question;
 
   if (quizFinished) {
-    questionNumberElement.textContent = "Puntaje final";
-    questionElement.textContent = `Puntaje: ${score}`;
+    score--;
+    questionNumberElement.textContent = `Puntaje: ${score}`;
+    questionElement.textContent = getMotivationalMsg(score);
     optionButtons.forEach(button => {
       button.style.display = "none"; // Ocultar botones de opción al finalizar el cuestionario
     });
@@ -66,7 +77,6 @@ function updateQuestion() {
       button.textContent = options[index].text;
       if(options[index].correct==true) {
         button.addEventListener("click", () => handleAnswer(button));
-        score++;
       }
     });
     prevButton.style.display = "inline-block"; // Mostrar botón anterior
@@ -76,6 +86,7 @@ function updateQuestion() {
 
 // Función para manejar la respuesta seleccionada por el usuario
 function handleAnswer(button) { 
+  score++;
   button.removeEventListener("click", handleAnswer);
 }
 
@@ -109,5 +120,16 @@ prevButton.addEventListener("click", previousQuestion);
 
 // Actualizar la primera pregunta al cargar la página
 updateQuestion();
+
+function getMotivationalMsg(score){ 
+  if(score<=3){
+    msg = "Cada intento cuenta, ¡Sigue esforzándote!";
+  } else if(score>4 && score<=6 ){
+    msg = "¡No te rindas, estás en el camino correcto!";
+  } else{
+    msg = "!Tus habilidades son asombrosas, sigue adelante!";
+  }
+  return msg;
+}
 
   
