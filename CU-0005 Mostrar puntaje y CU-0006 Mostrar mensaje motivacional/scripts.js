@@ -59,7 +59,6 @@ function updateQuestion() {
   questionElement.textContent = currentQuestion.question;
 
   if (quizFinished) {
-    score--;
     questionNumberElement.textContent = `Puntaje: ${score}`;
     questionElement.textContent = getMotivationalMsg(score);
     optionButtons.forEach(button => {
@@ -75,9 +74,6 @@ function updateQuestion() {
     optionButtons.forEach((button, index) => {
       button.style.display = "inline-block"; // Mostrar botones de opción
       button.textContent = options[index].text;
-      if(options[index].correct==true) {
-        button.addEventListener("click", () => handleAnswer(button));
-      }
     });
     prevButton.style.display = "inline-block"; // Mostrar botón anterior
     nextButton.textContent = "Siguiente"; // Restaurar texto del botón siguiente
@@ -85,10 +81,6 @@ function updateQuestion() {
 }
 
 // Función para manejar la respuesta seleccionada por el usuario
-function handleAnswer(button) { 
-  score++;
-  button.removeEventListener("click", handleAnswer);
-}
 
 // Función para calcular el puntaje y finalizar el cuestionario
 function finishQuiz() {
