@@ -1,0 +1,42 @@
+@import url('../CU-0004\ Habilitar\ cuestionario\ general/main_styles.css');
+
+main {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding: 175px 80px 0;
+}
+  
+.image img {
+    width: 360px; /* Ancho deseado */
+    height: auto; /* Altura se ajustará automáticamente */
+    object-fit: contain; /* Mantener la relación de aspecto */
+}
+
+.image h2 {
+    margin-bottom: 40px;
+}
+  
+.calificaciones ul {
+    list-style: none;
+}
+
+.calificaciones {
+    max-height: 400px; /* Altura máxima de la lista */
+    overflow-y: auto; /* Agregar barra de desplazamiento vertical cuando sea necesario */
+    margin-left: 20px;
+    width: 450px;
+    height: 400px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+}
+
+.calificaciones ul li {
+    margin: 27px;
+    background-color: #0D6EFD;
+    color: #ffffff;
+    padding: 13px;
+    border-radius: 5px;
+    width: auto;
+}

@@ -3,8 +3,8 @@ function toggleSidebar() {
     sidebar.classList.toggle('open');
 }
 
-function goToMainMenu() {
-    window.location.href = '../CU-0004 Habilitar cuestionario general/home.html';
+function goToQuestionare() {
+    window.location.href = '../CU-0003 Mostrar cuestionarios por materia/questionare.html';
 }
 
 // Obtener elementos HTML
@@ -64,16 +64,25 @@ function updateQuestion() {
     optionButtons.forEach(button => {
       button.style.display = "none"; // Ocultar botones de opción al finalizar el cuestionario
     });
-    prevButton.style.display = "none"; // Ocultar botón anterior al finalizar el cuestionario
+    prevButton.textContent = "Ver solución"; // Ocultar botón anterior al finalizar el cuestionario
     nextButton.textContent = "Volver al menu principal"; // Cambiar texto del botón siguiente al finalizar el cuestionario
     if(nextButton.textContent != "Siguiente"){
-      nextButton.addEventListener("click", () => goToMainMenu())
+      nextButton.addEventListener("click", () => goToQuestionare())
     }
   } else {
     const options = currentQuestion.options;
     optionButtons.forEach((button, index) => {
       button.style.display = "inline-block"; // Mostrar botones de opción
       button.textContent = options[index].text;
+<<<<<<< Updated upstream
+=======
+      if(options[index].correct==true) {
+        button.addEventListener("click", () => {
+          score++;
+        });
+        button.removeEventListener("click", handleAnswer);
+      }
+>>>>>>> Stashed changes
     });
     prevButton.style.display = "inline-block"; // Mostrar botón anterior
     nextButton.textContent = "Siguiente"; // Restaurar texto del botón siguiente

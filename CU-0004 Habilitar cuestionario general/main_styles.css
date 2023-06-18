@@ -1,0 +1,125 @@
+/*inicio codigo reutilizado*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Oswald", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header {
+    position: fixed;
+    height: 80px;
+    width: 100%;
+    z-index: 1;
+    padding: 0 20px;
+}
+
+.nav {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.nav_logo{
+    color: #0D6EFD;
+    font-size: 25px;
+}
+
+.nav_logo:hover {
+    color: #1CC922;
+}
+
+.user-info span {
+    margin-left: 5px;
+}
+
+/* fin codigo reutilizado */
+  
+/* barra lateral */
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -300px; /* Inicialmente oculto fuera del viewport */
+    width: 295px;
+    height: 100vh;
+    background-color: #EAEAEA;
+    transition: left 0.4s ease;
+    z-index: 999;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+
+.logo-image {
+    display: block;
+    width: 150px;
+    border-radius: 10px;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin-left: 15px ;
+}
+
+.sidebar-menu li {
+    margin-bottom: 10px;
+}
+
+.sidebar-menu a {
+    display: block;
+    padding: 20px 15px; /* Modifica los valores de padding aquí */
+    color: #333;
+    text-decoration: none;
+}
+
+.sidebar-menu a:hover {
+    background-color: #f5f5f5;
+}
+
+.sidebar-menu .active {
+    background-color: #ddd;
+    font-weight: bold;
+}
+
+.sidebar.open {
+    left: 0; /* Mostrar la barra lateral */
+}
+
+.menu-button {
+    cursor: pointer;
+    position: relative;
+}
+
+.menu-button:hover {
+    color: #1CC922;
+}
+
+.close-button:hover {
+    color: #1CC922;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #333;
+    font-size: 20px;
+}
