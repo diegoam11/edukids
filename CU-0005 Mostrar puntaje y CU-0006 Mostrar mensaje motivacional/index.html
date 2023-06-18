@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Edukids - Plataforma educativa</title>
-        <meta name="description" content="Cuestionarios interactivos para niños de primaria. Practica tus conocimientos en matemáticas, comunicación, ciencias y más. Diviértete aprendiendo con nuestra plataforma educativa.">
-        <meta name="keywords" content="cuestionarios educativos, plataforma para niños, primaria, matemáticas, lenguaje, ciencias">
+        <title>Edukids | Preguntas</title>
+        <meta name="description" content="Explora una variedad de preguntas educativas en Edukids, la plataforma interactiva para niños de primaria. Encuentra preguntas desafiantes y divertidas en matemáticas, lenguaje, ciencias y más. Pon a prueba tus conocimientos y aprende mientras resuelves preguntas interesantes.">
+        <meta name="keywords" content="Edukids, preguntas educativas, plataforma para niños, primaria, matemáticas, lenguaje, ciencias, aprendizaje interactivo">
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -17,7 +17,7 @@
                 <div class="menu-button" onclick="toggleSidebar()">
                     <i class="fas fa-bars fa-2x"></i>
                 </div>
-                <a href="#" class="nav_logo">Edukids</a>
+                <a href="../CU-0004 Habilitar cuestionario general/home.html" class="nav_logo">Edukids</a>
                 <div class="user-info">
                     <i class="fas fa-user"></i>
                     <span class="username">diegoam</span>
@@ -44,14 +44,14 @@
                 <h2 id="question-number"></h2>
                 <h3 id="question"></h3>
                 <div class="grid">
-                    <button class="option">12</button>
-                    <button class="option">4</button>
-                    <button class="option">56</button>
-                    <button class="option">1</button>
+                    <button class="option" id="option" onclick="cambiarColor()"></button>
+                    <button class="option" id="option" onclick="cambiarColor()"></button>
+                    <button class="option" id="option" onclick="cambiarColor()"></button>
+                    <button class="option" id="option" onclick="cambiarColor()"></button>
                 </div>
                 <div class="button-group">
-                    <button id="prev-button">Regresar</button>
-                    <button id="next-button">Siguiente</button>
+                    <button id="prev-button"></button>
+                    <button id="next-button"></button>
                 </div>
             </div> 
         </div>

@@ -9,4 +9,3 @@ function goToQuestionare() {
 
 const buttonMath = document.getElementById("math-button");
 buttonMath.addEventListener("click", () => goToQuestionare())
-
