@@ -1,0 +1,53 @@
+@import url('../CU-0004\ Habilitar\ cuestionario\ general/main_styles.css');
+
+main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.pyramid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  padding: 170px 80px 0px;
+  }
+  
+  .step {
+    width: 10px;
+    height: 40px;
+    background-color: #000;
+    margin-right: 5px;
+    border: solid red 1px;
+    color: white;
+    border-radius: 12px;
+    padding: 5px;
+    border: solid green 1px;
+  }
+  
+  #step10 { width: 580px; }
+  #step9 { width: 540px; }
+  #step8 { width: 500px; }
+  #step7 { width: 460px; }
+  #step6 { width: 420px; }
+  #step5 { width: 380px; }
+  #step4 { width: 340px; }
+  #step3 { width: 300px; }
+  #step2 { width: 240px; }
+  #step1 { width: 200px; }
+
+  .button {
+    margin-top: 20px;
+    padding: 10px 40px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+  
