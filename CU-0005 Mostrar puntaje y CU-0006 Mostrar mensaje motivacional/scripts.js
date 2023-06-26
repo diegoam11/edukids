@@ -7,6 +7,10 @@ function goToMainMenu() {
     window.location.href = '../CU-0004 Habilitar cuestionario general/home.html';
 }
 
+function goToSeeSolution() {
+  window.location.href = '../CU-007 Ver solucion/solucion.html';
+}
+
 // Obtener elementos HTML
 const questionNumberElement = document.getElementById("question-number");
 const questionElement = document.getElementById("question");
@@ -46,6 +50,16 @@ const questions = [
       { text: "15", correct: false }
     ]
   },
+  {
+    questionNumber: 4,
+    question: "¿Cuál es el valor de pi aproximadamente?",
+    options: [
+      { text: "3", correct: false },
+      { text: "3.14", correct: true },
+      { text: "3.10", correct: false },
+      { text: "4.1", correct: false }
+    ]
+  },
 ];
 
 let currentQuestionIndex = 0;
@@ -65,6 +79,7 @@ function updateQuestion() {
       button.style.display = "none"; // Ocultar botones de opción al finalizar el cuestionario
     });
     prevButton.textContent = "Ver solución"; // Ocultar botón anterior al finalizar el cuestionario
+    prevButton.addEventListener("click", () => goToSeeSolution())
     nextButton.textContent = "Volver al menu principal"; // Cambiar texto del botón siguiente al finalizar el cuestionario
     if(nextButton.textContent != "Siguiente"){
       nextButton.addEventListener("click", () => goToMainMenu())

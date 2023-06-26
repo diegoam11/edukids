@@ -1,0 +1,60 @@
+@import url('../CU-0004\ Habilitar\ cuestionario\ general/main_styles.css');
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding: 100px 80px;
+}
+  
+.container {
+    display: flex;
+    flex-direction: column;
+    max-height: 700px; /* Altura máxima de la lista */
+    max-width: 600px;
+    overflow-y: auto; /* Agregar barra de desplazamiento vertical cuando sea necesario */
+    width: auto;
+    height: 600px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.question {
+    margin: 10px;
+    background-color: #0D6EFD;
+    color: #ffffff;
+    padding: 13px;
+    border-radius: 5px;
+    width: auto;
+}
+
+.question-box {
+    margin: 27px;
+    background-color: #EAEAEA;
+    color: #ffffff;
+    padding: 13px;
+    border-radius: 5px;
+    width: auto;
+}
+
+.answer {
+    margin: 10px;
+    background-color: #1CC922;
+    color: #ffffff;
+    padding: 13px;
+    border-radius: 5px;
+    width: auto;
+}
+
+.button {
+    margin-top: 20px;
+    padding: 10px 40px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
