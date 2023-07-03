@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+    <script src="../authentication/isAuthenticated.js" ></script>
     <head>
         <title>Edukids | Cursos</title>
         <meta name="description" content="Explora los cursos disponibles en Edukids, la plataforma educativa interactiva para niños de primaria. Descubre una amplia variedad de temas y materias, y aprende de manera divertida con nuestros cuestionarios y recursos educativos.">
@@ -17,10 +18,11 @@
                 <div class="menu-button" onclick="toggleSidebar()">
                     <i class="fas fa-bars fa-2x"></i>
                 </div>
-                <a href="#" class="nav_logo">Edukids</a>
+                <a href="#" class="nav_logo">edukids</a>
                 <div class="user-info">
                     <i class="fas fa-user"></i>
-                    <span class="username">diegoam</span>
+                    <span id="username" class="username"></span>
+                    <i id="cerrarSesion" class="fas fa-sign-out-alt"></i>
                 </div>
             </nav>
         </header>
@@ -29,13 +31,23 @@
             <button class="close-button" onclick="toggleSidebar()">
                 <i class="fas fa-times"></i>
             </button>
+
             <div class="logo-container">
                 <img src="../multimedia/logo.png" alt="Logo de Edukids" class="logo-image">
             </div>
-
             <ul class="sidebar-menu">
-                <li><a href="../CU-0008 Mostrar historial de calificaciones/history.html">Historial de calificaciones</a></li>
-                <li><a href="../CU-0009 Ranking de calificaciones/ranking.html">Ranking de calificaciones</a></li>
+                <li>
+                    <a href="../CU-0008 Mostrar historial de calificaciones/history.html">
+                        <span class="icon"><i class="fas fa-list-ul"></i></span>
+                        <span class="text"> Historial de calificaciones</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../CU-0008 Mostrar historial de calificaciones/history.html">
+                        <span class="icon"><i class="fas fa-trophy"></i></span>
+                        <span class="text">Ranking de calificaciones</span>
+                    </a>
+                </li>
             </ul>
         </div>
 
@@ -44,11 +56,12 @@
                 <button class="course-button" id="math-button">Matemáticas</button>
                 <button class="course-button" id="biology-button">Biología</button>
                 <button class="course-button" id="comunication-button">Comunicacion</button>
-                <button class="course-button">Curso 4</button>
-                <button class="course-button">Curso 5</button>
+                <button class="course-button" id="physics-button" >Física</button>
+                <button class="course-button" id="chemistry-button">Química</button>
                 <button class="course-button" id="general-button">Cuestinario general</button>
             </div>
         </main>
+        <script src="../authentication/helpers.js" ></script>
         <script src="scripts.js"></script>
   </body>
 </html>

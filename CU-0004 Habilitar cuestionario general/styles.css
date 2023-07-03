@@ -21,33 +21,80 @@ main {
     width: 250px;
     height: 125px;
     border: none;
-    border-radius: 10px;
+    border-radius: 12px;
     font-size: 18px;
     background-color: #EAEAEA;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-#math-button:hover {
-    background-color: #8b0000;
-    color: white;
+.course-button {
     font-style: solid;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
+.course-button:active {
+    transform: translateY(4px);
+}
+
+/* math*/
+
+#math-button {
+    background-color: #22aae1;
+}
+  
+#math-button:hover {
+    background-color: #1c8fb9;
+}
+
+/* biology*/
+
+#biology-button {
+    background-color: #3a5eaa;
+}
+  
 #biology-button:hover {
-    background-color: #006400;
-    color: white;
-    font-style: solid;
+    background-color: #2c4a85;
+}
+
+/* comunication*/
+
+#comunication-button{
+    background-color: #ed695a;
 }
 
 #comunication-button:hover {
-    background-color: #ffa500;
-    color: white;
-    font-style: solid;
+    background-color: #c85247;
+}
+
+/* general*/
+
+#general-button {
+    background-color: #ffd64a;
 }
 
 #general-button:hover {
-    background-color: #ffa500;
-    color: white;
-    font-style: solid;
+    background-color: #e3bf3e;
+}
+
+/* physics*/
+
+#physics-button {
+    background-color: #7d2d8d;
+}
+
+#physics-button:hover {
+    background-color: #5a1e68;
+}
+
+/* chemistry*/
+
+#chemistry-button {
+    background-color: #3db54b;
+}
+
+#chemistry-button:hover {
+    background-color: #2c8a3a;
 }

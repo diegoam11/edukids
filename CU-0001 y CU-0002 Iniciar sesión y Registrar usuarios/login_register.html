@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+  <script src="auth.js"></script>
   <head>
     <title>Edukids | Login</title>
     <meta name="description" content="Inicia sesión en Edukids y refuerza tus conocimientos con nosotros">
@@ -27,41 +28,41 @@
       <div class="form_container">
         <i class="uil uil-times form_close"></i>
         <div class="form login_form">
-          <form action="#">
+          <form id="inicioSesion" action="#">
             <h2>Iniciar Sesión</h2>
             <div class="input_box">
-              <input type="email" placeholder="Ingresar correo" required />
+              <input id="emailInicioSesion" name="email" type="email" placeholder="Ingresar correo" required />
               <i class="uil uil-envelope-alt email"></i>
             </div>
             <div class="input_box">
-              <input type="password" placeholder="Ingresar contraseña" required />
+              <input id="passwordInicioSesion" name="password" type="password" placeholder="Ingresar contraseña" required />
               <i class="uil uil-lock password"></i>
               <i class="uil uil-eye-slash pw_hide"></i>
             </div>
-            <button class="button">Ingresar</button>
+            <button type="submit" class="button">Ingresar</button>
             <div class="login_signup">¿No tienes una cuenta? <a href="#" id="signup">Regístrate</a></div>
           </form>
         </div>
 
         <div class="form signup_form">
-          <form action="#">
+          <form id="registro" action="#">
             <h2>Registrarse</h2>
             <div class="input_box">
-              <input type="email" placeholder="Ingresar correo" required />
+              <input id="emailRegistro" name="email" type="email" placeholder="Ingresar correo" required />
               <i class="uil uil-envelope-alt email"></i> 
             </div>
             <div class="input_box">
-              <input type="password" placeholder="Ingresar contraseña" required />
+              <input pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[a-zA-Z\d!@#$%^&*]{6,}$"   title="La contraseña debe ser de min. 6 caracteres e incluir por lo menos una letra mayúscula, minúscula, un número y un caracter especial" id="passwordRegistro" name="password" type="password" placeholder="Ingresar contraseña" required />
               <i class="uil uil-lock password"></i>
               <i class="uil uil-eye-slash pw_hide"></i>
             </div>
-            <button class="button">Registrarme</button>
+            <button type="submit" class="button">Registrarme</button>
             <div class="login_signup">¿Ya tienes una cuenta?<a href="#" id="login"> Iniciar sesión</a></div>
           </form>
         </div>
       </div>
     </section>
-    <script src="scripts.js"></script>
+    <script type="module" src="scripts.js"></script>
   </body>
 </html>
 |

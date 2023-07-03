@@ -15,7 +15,8 @@ a {
     height: 80px;
     width: 100%;
     z-index: 1;
-    padding: 0 20px;
+    padding: 0 20px; 
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
 }
 
 .nav {
@@ -25,22 +26,32 @@ a {
     justify-content: space-between;
     max-width: 1100px;
     width: 100%;
-    margin: 0 auto;
+    margin: 0 auto;    
 }
 
 .nav_logo{
-    color: #0D6EFD;
+    color: #91ca47;
     font-size: 25px;
 }
 
 .nav_logo:hover {
-    color: #1CC922;
+    color: #61881a;
 }
 
 .user-info span {
     margin-left: 5px;
 }
 
+.user-info .fas.fa-user,
+.user-info span {
+    color: #000; /* Color blanco */
+}
+
+#cerrarSesion {
+    margin-left: 5px;
+    color: red;
+}
+  
 /* fin codigo reutilizado */
   
 /* barra lateral */
@@ -51,9 +62,14 @@ a {
     left: -300px; /* Inicialmente oculto fuera del viewport */
     width: 295px;
     height: 100vh;
-    background-color: #EAEAEA;
+    background: linear-gradient(to bottom, #f2f2f2, #ECECEC);
     transition: left 0.4s ease;
     z-index: 999;
+}
+
+.icon {
+    margin: 5px;
+    padding-left: 5px;
 }
 
 .logo-container {
@@ -83,12 +99,15 @@ a {
 .sidebar-menu a {
     display: block;
     padding: 20px 15px; /* Modifica los valores de padding aquí */
-    color: #333;
+    color: #000;
+    font-style: solid;
     text-decoration: none;
+    box-shadow: 0 2px 15px rgba(145, 202, 71, 0.1);
 }
 
 .sidebar-menu a:hover {
-    background-color: #f5f5f5;
+    background-color: #fff;
+    border-bottom: 2px solid #91ca47;
 }
 
 .sidebar-menu .active {
@@ -101,16 +120,19 @@ a {
 }
 
 .menu-button {
+    color: #000;
     cursor: pointer;
     position: relative;
 }
 
-.menu-button:hover {
-    color: #1CC922;
+.menu-button:active,
+.close-button:hover {
+    transform: translateY(3px);
 }
 
+.menu-button:hover,
 .close-button:hover {
-    color: #1CC922;
+    color: #91ca47;
 }
 
 .close-button {
@@ -120,6 +142,6 @@ a {
     background: none;
     border: none;
     cursor: pointer;
-    color: #333;
+    color: #000;
     font-size: 20px;
 }
